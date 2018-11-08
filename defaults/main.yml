@@ -1,0 +1,79 @@
+# Linux jenkins user
+jenkins_pv_pipeline_library_jenkins_process_user: jenkins
+
+# Linux group of jenkins user
+jenkins_pv_pipeline_library_jenkins_process_group: "{{ jenkins_pv_pipeline_library_jenkins_process_user }}"
+
+# Jenkins admin username
+jenkins_pv_pipeline_library_admin_username: admin
+
+# Jenkins admin password
+jenkins_pv_pipeline_library_admin_password: admin
+
+# Path to the jenkins directory
+jenkins_pv_pipeline_library_jenkins_home: /var/lib/jenkins
+
+# Hostname of the jenkins instance
+jenkins_pv_pipeline_library_jenkins_hostname: localhost
+
+# HTTP port of the jenkins instance
+jenkins_pv_pipeline_library_jenkins_port: 8080
+
+# Url prefix of the jenkins instance, e.g. when running in tomcat
+jenkins_pv_pipeline_library_jenkins_url_prefix: ""
+
+# Path to the jenkins update directory
+jenkins_pv_pipeline_library_jenkins_update_dir: "{{ jenkins_pv_pipeline_library_jenkins_home }}/updates"
+
+# The base url of the jenkins instance
+jenkins_pv_pipeline_library_jenkins_base_url: "http://{{ jenkins_facts_jenkins_hostname }}:{{ jenkins_facts_jenkins_port }}{{ jenkins_facts_jenkins_url_prefix }}"
+
+# Maximum seconds since the last jenkins plugin update check
+jenkins_pv_pipeline_library_updates_expiration: 86400
+
+# Timeout for jenkins update operation
+jenkins_pv_pipeline_library_updates_timeout: 60
+
+# When set to enable the role will log some debug information
+jenkins_pv_pipeline_library_debug: false
+
+# Plugins and their versions that must be present for jenkins-pv-pipeline-library
+jenkins_pv_pipeline_library_plugins_present:
+  - name: analysis-collector
+    version: "1.52"
+  - name: analysis-core
+    version: "1.95"
+  - name: ansicolor
+    version: "0.5.2"
+  - name: antisamy-markup-formatter
+    version: "1.5"
+  - name: checkstyle
+    version: "3.50"
+  - name: email-ext
+    version: "2.63"
+  - name: findbugs
+    version: "4.72"
+    # stick with version 2.2.1 because of https://issues.jenkins-ci.org/browse/JENKINS-49823
+  - name: jacoco
+    version: "2.2.1"
+  - name: javadoc
+    version: "1.4"
+  - name: maven-plugin
+    version: "3.1.2"
+  - name: pmd
+    version: "3.50"
+  - name: tasks
+    version: "4.52"
+  - name: timestamper
+    version: "1.8.10"
+  - name: versionnumber
+    version: "1.9"
+
+# Plugins that must be absent for jenkins-pv-pipeline-library
+jenkins_pv_pipeline_library_plugins_absent: []
+
+# Signatures that need to be approved for jenkins-pv-pipeline-library
+jenkins_pv_pipeline_library_approved_signatures_present:
+  - staticField de.provision.cicd.jenkins.pipeline.tools.JDK SUN_JAVA8_JDK
+  - staticField de.provision.cicd.jenkins.pipeline.tools.Maven APACHE_MAVEN3
+  - staticField de.provision.cicd.jenkins.pipeline.tools.NodeJs NODEJS_6
