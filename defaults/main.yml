@@ -73,7 +73,4 @@ jenkins_pv_pipeline_library_plugins_present:
 jenkins_pv_pipeline_library_plugins_absent: []
 
 # Signatures that need to be approved for jenkins-pv-pipeline-library
-jenkins_pv_pipeline_library_approved_signatures_present:
-  - staticField de.provision.cicd.jenkins.pipeline.tools.JDK SUN_JAVA8_JDK
-  - staticField de.provision.cicd.jenkins.pipeline.tools.Maven APACHE_MAVEN3
-  - staticField de.provision.cicd.jenkins.pipeline.tools.NodeJs NODEJS_6
+jenkins_pv_pipeline_library_approved_signatures_present: []
