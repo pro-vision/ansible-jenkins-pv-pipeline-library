@@ -72,4 +72,6 @@ jenkins_pv_pipeline_library_plugins_present:
 jenkins_pv_pipeline_library_plugins_absent: []
 
 # Signatures that need to be approved for jenkins-pv-pipeline-library
-jenkins_pv_pipeline_library_approved_signatures_present: []
+jenkins_pv_pipeline_library_approved_signatures_present:
+  - staticField de.provision.devops.jenkins.pipeline.utils.ConfigConstants JOB_TYPE
+  - staticField de.provision.cicd.jenkins.pipeline.utils.ConfigConstants JOB_TYPE
