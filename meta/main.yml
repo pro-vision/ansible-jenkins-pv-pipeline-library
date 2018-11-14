@@ -37,7 +37,10 @@ dependencies:
       jenkins_pipeline_library_jenkins_update_dir : "{{ jenkins_pv_pipeline_library_jenkins_update_dir }}",
       jenkins_pipeline_library_jenkins_process_user : "{{ jenkins_pv_pipeline_library_jenkins_process_user }}",
       jenkins_pipeline_library_jenkins_process_group : "{{ jenkins_pv_pipeline_library_jenkins_process_group }}",
-      tags: ['pro_vision.jenkins_pipeline_library']
+      tags: [
+        "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_pipeline_library",
+        "wcm_io_devops.jenkins_pipeline_library"
+      ]
       }
   # install jenkins-pv-pipeline-library specific plugins
   - { role: wcm_io_devops.jenkins_plugins,
@@ -49,7 +52,11 @@ dependencies:
       jenkins_plugins_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}",
       jenkins_plugins_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}",
       jenkins_plugins_present: "{{ jenkins_pv_pipeline_library_plugins_present }}",
-      jenkins_plugins_absent: "{{ jenkins_pv_pipeline_library_plugins_absent }}"
+      jenkins_plugins_absent: "{{ jenkins_pv_pipeline_library_plugins_absent }}",
+      tags: [
+        "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_plugins",
+        "wcm_io_devops.jenkins_plugins"
+      ]
   }
   # configure script security for jenkins-pv-pipeline-library
   - { role: wcm_io_devops.jenkins_script_security,
@@ -60,5 +67,9 @@ dependencies:
       jenkins_script_security_jenkins_hostname: "{{ jenkins_pv_pipeline_library_jenkins_hostname }}",
       jenkins_script_security_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}",
       jenkins_script_security_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}",
-      jenkins_script_security_approved_signatures_present: "{{ jenkins_pv_pipeline_library_approved_signatures_present }}"
+      jenkins_script_security_approved_signatures_present: "{{ jenkins_pv_pipeline_library_approved_signatures_present }}",
+      tags: [
+        "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_script_security",
+        "wcm_io_devops.jenkins_script_security"
+      ]
   }
