@@ -44,7 +44,7 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: analysis-core
     version: "1.95"
   - name: ansicolor
-    version: "0.5.2"
+    version: "0.5.3"
   - name: antisamy-markup-formatter
     version: "1.5"
   - name: checkstyle
@@ -53,9 +53,8 @@ jenkins_pv_pipeline_library_plugins_present:
     version: "2.63"
   - name: findbugs
     version: "4.72"
-    # stick with version 2.2.1 because of https://issues.jenkins-ci.org/browse/JENKINS-49823
   - name: jacoco
-    version: "2.2.1"
+    version: "3.0.4"
   - name: javadoc
     version: "1.4"
   - name: maven-plugin
