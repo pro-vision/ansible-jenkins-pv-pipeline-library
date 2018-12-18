@@ -44,7 +44,7 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: analysis-core
     version: "1.95"
   - name: ansicolor
-    version: "0.5.3"
+    version: "0.6.0"
   - name: antisamy-markup-formatter
     version: "1.5"
   - name: checkstyle
@@ -58,7 +58,7 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: javadoc
     version: "1.4"
   - name: maven-plugin
-    version: "3.1.2"
+    version: "3.2"
   - name: pmd
     version: "3.50"
   - name: tasks
