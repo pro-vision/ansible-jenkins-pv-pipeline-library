@@ -67,7 +67,8 @@ dependencies:
       jenkins_script_security_jenkins_hostname: "{{ jenkins_pv_pipeline_library_jenkins_hostname }}",
       jenkins_script_security_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}",
       jenkins_script_security_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}",
-      jenkins_script_security_approved_signatures_present: "{{ jenkins_pv_pipeline_library_approved_signatures_present }}",
+      jenkins_script_security_approved_signatures_present:
+        "{{ jenkins_pv_pipeline_library_approved_signatures_present }}",
       tags: [
         "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_script_security",
         "wcm_io_devops.jenkins_script_security"
