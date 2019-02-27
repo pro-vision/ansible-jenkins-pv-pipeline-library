@@ -43,6 +43,8 @@ jenkins_pv_pipeline_library_plugins_present:
     version: "2.0.0"
   - name: analysis-core
     version: "1.95"
+  - name: analysis-model-api
+    version: "2.1.2"
   - name: ansicolor
     version: "0.6.2"
   - name: antisamy-markup-formatter
@@ -67,6 +69,8 @@ jenkins_pv_pipeline_library_plugins_present:
     version: "1.9"
   - name: versionnumber
     version: "1.9"
+  - name: warnings-ng
+    version: "3.0.3"
 
 # Plugins that must be absent for jenkins-pv-pipeline-library
 jenkins_pv_pipeline_library_plugins_absent: []
