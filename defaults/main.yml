@@ -52,7 +52,7 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: checkstyle
     version: "4.0.0"
   - name: email-ext
-    version: "2.66"
+    version: "2.64"
   - name: findbugs
     version: "5.0.0"
   - name: jacoco
