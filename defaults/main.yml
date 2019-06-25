@@ -42,15 +42,16 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: analysis-collector
     version: "2.0.0"
   - name: analysis-core
-    version: "1.95"
+    version: "1.96"
   - name: analysis-model-api
-    version: "4.0.0"
+    version: "5.1.1"
   - name: ansicolor
     version: "0.6.2"
   - name: antisamy-markup-formatter
     version: "1.5"
   - name: checkstyle
     version: "4.0.0"
+  # do not update until script-security is 1.54+
   - name: email-ext
     version: "2.64"
   - name: findbugs
@@ -60,7 +61,7 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: javadoc
     version: "1.5"
   - name: maven-plugin
-    version: "3.2"
+    version: "3.3"
   - name: pmd
     version: "4.0.0"
   - name: tasks
