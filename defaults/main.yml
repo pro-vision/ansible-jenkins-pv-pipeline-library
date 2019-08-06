@@ -44,16 +44,15 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: analysis-core
     version: "1.96"
   - name: analysis-model-api
-    version: "5.1.1"
+    version: "5.3.0"
   - name: ansicolor
     version: "0.6.2"
   - name: antisamy-markup-formatter
     version: "1.5"
   - name: checkstyle
     version: "4.0.0"
-  # do not update until script-security is 1.54+
   - name: email-ext
-    version: "2.64"
+    version: "2.66"
   - name: findbugs
     version: "5.0.0"
   - name: jacoco
@@ -61,17 +60,17 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: javadoc
     version: "1.5"
   - name: maven-plugin
-    version: "3.3"
+    version: "3.4"
   - name: pmd
     version: "4.0.0"
   - name: tasks
     version: "4.53"
   - name: timestamper
-    version: "1.9"
+    version: "1.10"
   - name: versionnumber
     version: "1.9"
   - name: warnings-ng
-    version: "4.0.0"
+    version: "5.3.0"
 
 # Plugins that must be absent for jenkins-pv-pipeline-library
 jenkins_pv_pipeline_library_plugins_absent: []
