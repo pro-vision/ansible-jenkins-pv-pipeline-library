@@ -51,7 +51,6 @@ jenkins_pv_pipeline_library_plugins_present:
     version: "1.5"
   - name: checkstyle
     version: "4.0.0"
-  # do not update until script-security is 1.54+
   - name: email-ext
     version: "2.66"
   - name: findbugs
