@@ -51,8 +51,6 @@ jenkins_pv_pipeline_library_plugins_present:
     version: "1.6"
   - name: checkstyle
     version: "4.0.0"
-  - name: email-ext
-    version: "2.68"
   - name: findbugs
     version: "5.0.0"
   - name: forensics-api
