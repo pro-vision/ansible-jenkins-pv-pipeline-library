@@ -77,8 +77,6 @@ jenkins_pv_pipeline_library_plugins_present:
     version: "4.0.0"
   - name: popper-api
     version: "1.16.0-6"
-  - name: strict-crumb-issuer
-    version: "2.1.0"
   - name: tasks
     version: "4.53"
   - name: timestamper
