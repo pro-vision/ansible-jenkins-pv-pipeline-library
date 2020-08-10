@@ -44,19 +44,19 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: analysis-core
     version: "1.96"
   - name: analysis-model-api
-    version: "8.0.1"
+    version: "8.2.1"
   - name: ansicolor
-    version: "0.6.3"
+    version: "0.7.2"
   - name: antisamy-markup-formatter
-    version: "2.0"
+    version: "2.1"
   - name: bootstrap4-api
-    version: "4.4.1-13"
+    version: "4.5.0-2"
   - name: checkstyle
     version: "4.0.0"
+  - name: checks-api
+    version: "0.2.2"
   - name: data-tables-api
-    version: "1.10.20-15"
-  - name: echarts-api
-    version: "4.6.0-9"
+    version: "1.10.21-2"
   - name: findbugs
     version: "5.0.0"
   - name: font-awesome-api
@@ -64,15 +64,11 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: forensics-api
     version: "0.7.0"
   - name: jacoco
-    version: "3.0.5"
+    version: "3.0.7"
   - name: javadoc
-    version: "1.5"
-  - name: jquery3-api
-    version: "3.4.1-10"
+    version: "1.6"
   - name: maven-plugin
-    version: "3.6"
-  - name: plugin-util-api
-    version: "1.2.0"
+    version: "3.7"
   - name: pmd
     version: "4.0.0"
   - name: popper-api
@@ -80,11 +76,11 @@ jenkins_pv_pipeline_library_plugins_present:
   - name: tasks
     version: "4.53"
   - name: timestamper
-    version: "1.11.3"
+    version: "1.11.5"
   - name: versionnumber
     version: "1.9"
   - name: warnings-ng
-    version: "8.1.0"
+    version: "8.4.1"
 
 # Plugins that must be absent for jenkins-pv-pipeline-library
 jenkins_pv_pipeline_library_plugins_absent: []
