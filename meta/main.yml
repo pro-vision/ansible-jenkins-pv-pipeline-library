@@ -1,10 +1,11 @@
+---
 galaxy_info:
   role_name: jenkins_pv_pipeline_library
   author: Tobias Richter
   description: Ansible role for setting up a Jenkins instance for the pro!vision jenkins-pv-pipeline-library
   company: pro!vision
   license: Apache
-  min_ansible_version: 2.4
+  min_ansible_version: 2.7
 
   platforms:
     - name: EL
@@ -26,51 +27,46 @@ galaxy_info:
 
 dependencies:
   # install jenkins-pv-pipeline-library specific plugins
-  - { role: wcm_io_devops.jenkins_pipeline_library,
-      version: 2.263.3-1,
-      jenkins_pipeline_library_admin_username: "{{ jenkins_pv_pipeline_library_admin_username }}",
-      jenkins_pipeline_library_admin_password: "{{ jenkins_pv_pipeline_library_admin_password }}",
-      jenkins_pipeline_library_jenkins_home: "{{ jenkins_pv_pipeline_library_jenkins_home }}",
-      jenkins_pipeline_library_jenkins_hostname: "{{ jenkins_pv_pipeline_library_jenkins_hostname }}",
-      jenkins_pipeline_library_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}",
-      jenkins_pipeline_library_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}",
-      jenkins_pipeline_library_jenkins_update_dir: "{{ jenkins_pv_pipeline_library_jenkins_update_dir }}",
-      jenkins_pipeline_library_jenkins_process_user: "{{ jenkins_pv_pipeline_library_jenkins_process_user }}",
-      jenkins_pipeline_library_jenkins_process_group: "{{ jenkins_pv_pipeline_library_jenkins_process_group }}",
-      tags: [
-        "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_pipeline_library",
-        "wcm_io_devops.jenkins_pipeline_library"
-      ]
-      }
+  - role: wcm_io_devops.jenkins_pipeline_library
+    version: 2.263.3-1
+    jenkins_pipeline_library_admin_username: "{{ jenkins_pv_pipeline_library_admin_username }}"
+    jenkins_pipeline_library_admin_password: "{{ jenkins_pv_pipeline_library_admin_password }}"
+    jenkins_pipeline_library_jenkins_home: "{{ jenkins_pv_pipeline_library_jenkins_home }}"
+    jenkins_pipeline_library_jenkins_hostname: "{{ jenkins_pv_pipeline_library_jenkins_hostname }}"
+    jenkins_pipeline_library_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}"
+    jenkins_pipeline_library_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}"
+    jenkins_pipeline_library_jenkins_update_dir: "{{ jenkins_pv_pipeline_library_jenkins_update_dir }}"
+    jenkins_pipeline_library_jenkins_process_user: "{{ jenkins_pv_pipeline_library_jenkins_process_user }}"
+    jenkins_pipeline_library_jenkins_process_group: "{{ jenkins_pv_pipeline_library_jenkins_process_group }}"
+    tags:
+      - "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_pipeline_library"
+      - "wcm_io_devops.jenkins_pipeline_library"
+
   # install jenkins-pv-pipeline-library specific plugins
-  - { role: wcm_io_devops.jenkins_plugins,
-      version: 1.5.1,
-      jenkins_plugins_admin_username: "{{ jenkins_pv_pipeline_library_admin_username }}",
-      jenkins_plugins_admin_password: "{{ jenkins_pv_pipeline_library_admin_password }}",
-      jenkins_plugins_jenkins_home: "{{ jenkins_pv_pipeline_library_jenkins_home }}",
-      jenkins_plugins_jenkins_hostname: "{{ jenkins_pv_pipeline_library_jenkins_hostname }}",
-      jenkins_plugins_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}",
-      jenkins_plugins_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}",
-      jenkins_plugins_present: "{{ jenkins_pv_pipeline_library_plugins_present }}",
-      jenkins_plugins_absent: "{{ jenkins_pv_pipeline_library_plugins_absent }}",
-      tags: [
-        "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_plugins",
-        "wcm_io_devops.jenkins_plugins"
-      ]
-  }
+  - role: wcm_io_devops.jenkins_plugins
+    version: 1.5.1
+    jenkins_plugins_admin_username: "{{ jenkins_pv_pipeline_library_admin_username }}"
+    jenkins_plugins_admin_password: "{{ jenkins_pv_pipeline_library_admin_password }}"
+    jenkins_plugins_jenkins_home: "{{ jenkins_pv_pipeline_library_jenkins_home }}"
+    jenkins_plugins_jenkins_hostname: "{{ jenkins_pv_pipeline_library_jenkins_hostname }}"
+    jenkins_plugins_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}"
+    jenkins_plugins_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}"
+    jenkins_plugins_present: "{{ jenkins_pv_pipeline_library_plugins_present }}"
+    jenkins_plugins_absent: "{{ jenkins_pv_pipeline_library_plugins_absent }}"
+    tags:
+      - "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_plugins"
+      - "wcm_io_devops.jenkins_plugins"
+
   # configure script security for jenkins-pv-pipeline-library
-  - { role: wcm_io_devops.jenkins_script_security,
-      version: 1.1.3,
-      jenkins_script_security_admin_username: "{{ jenkins_pv_pipeline_library_admin_username }}",
-      jenkins_script_security_admin_password: "{{ jenkins_pv_pipeline_library_admin_password }}",
-      jenkins_script_security_jenkins_home: "{{ jenkins_pv_pipeline_library_jenkins_home }}",
-      jenkins_script_security_jenkins_hostname: "{{ jenkins_pv_pipeline_library_jenkins_hostname }}",
-      jenkins_script_security_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}",
-      jenkins_script_security_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}",
-      jenkins_script_security_approved_signatures_present:
-        "{{ jenkins_pv_pipeline_library_approved_signatures_present }}",
-      tags: [
-        "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_script_security",
-        "wcm_io_devops.jenkins_script_security"
-      ]
-  }
+  - role: wcm_io_devops.jenkins_script_security
+    version: 1.1.3
+    jenkins_script_security_admin_username: "{{ jenkins_pv_pipeline_library_admin_username }}"
+    jenkins_script_security_admin_password: "{{ jenkins_pv_pipeline_library_admin_password }}"
+    jenkins_script_security_jenkins_home: "{{ jenkins_pv_pipeline_library_jenkins_home }}"
+    jenkins_script_security_jenkins_hostname: "{{ jenkins_pv_pipeline_library_jenkins_hostname }}"
+    jenkins_script_security_jenkins_port: "{{ jenkins_pv_pipeline_library_jenkins_port }}"
+    jenkins_script_security_jenkins_url_prefix: "{{ jenkins_pv_pipeline_library_jenkins_url_prefix }}"
+    jenkins_script_security_approved_signatures_present: "{{ jenkins_pv_pipeline_library_approved_signatures_present }}"
+    tags:
+      - "jenkins_pv_pipeline_library_wcm_io_devops.jenkins_script_security"
+      - "wcm_io_devops.jenkins_script_security"
