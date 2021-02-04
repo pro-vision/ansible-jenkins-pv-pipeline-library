@@ -5,7 +5,7 @@ galaxy_info:
   description: Ansible role for setting up a Jenkins instance for the pro!vision jenkins-pv-pipeline-library
   company: pro!vision
   license: Apache
-  min_ansible_version: 2.4
+  min_ansible_version: 2.7
 
   platforms:
     - name: EL
