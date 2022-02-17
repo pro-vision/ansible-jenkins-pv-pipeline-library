@@ -70,7 +70,6 @@ jenkins_pv_pipeline_library_plugins_present:
 # Plugins that must be absent for jenkins-pv-pipeline-library
 jenkins_pv_pipeline_library_plugins_absent:
   - name: analysis-collector
-  - name: analysis-core
   - name: checkstyle
   - name: findbugs
   - name: pmd
