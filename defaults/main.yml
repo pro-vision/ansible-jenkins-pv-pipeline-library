@@ -40,8 +40,6 @@ jenkins_pv_pipeline_library_debug: false
 
 # Plugins and their versions that must be present for jenkins-pv-pipeline-library
 jenkins_pv_pipeline_library_plugins_present:
-  - name: analysis-core
-    version: "1.95"
   - name: analysis-model-api
     version: "10.9.1"
   - name: ansicolor
@@ -69,6 +67,7 @@ jenkins_pv_pipeline_library_plugins_present:
 
 # Plugins that must be absent for jenkins-pv-pipeline-library
 jenkins_pv_pipeline_library_plugins_absent:
+  - name: analysis-core
   - name: analysis-collector
   - name: checkstyle
   - name: findbugs
