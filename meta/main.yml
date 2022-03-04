@@ -28,7 +28,7 @@ galaxy_info:
 dependencies:
   # install jenkins-pv-pipeline-library specific plugins
   - role: wcm_io_devops.jenkins_pipeline_library
-    version: 2.289.1-1
+    version: 2.319.3-1
     jenkins_pipeline_library_admin_username: "{{ jenkins_pv_pipeline_library_admin_username }}"
     jenkins_pipeline_library_admin_password: "{{ jenkins_pv_pipeline_library_admin_password }}"
     jenkins_pipeline_library_jenkins_home: "{{ jenkins_pv_pipeline_library_jenkins_home }}"
