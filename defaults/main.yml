@@ -40,45 +40,25 @@ jenkins_pv_pipeline_library_debug: false
 
 # Plugins and their versions that must be present for jenkins-pv-pipeline-library
 jenkins_pv_pipeline_library_plugins_present:
-  - name: analysis-collector
-    version: "2.0.0"
-  - name: analysis-core
-    version: "1.96"
-  - name: analysis-model-api
-    version: "10.2.5"
   - name: ansicolor
-    version: "1.0.0"
-  - name: antisamy-markup-formatter
-    version: "2.1"
-  - name: checkstyle
-    version: "4.0.0"
+    version: "1.0.1"
   - name: dashboard-view
-    version: "2.17"
-  - name: data-tables-api
-    version: "1.10.23-3"
-  - name: findbugs
-    version: "5.0.0"
-  - name: forensics-api
-    version: "1.0.0"
+    version: "2.18"
   - name: jacoco
-    version: "3.2.0"
-  - name: javadoc
-    version: "1.6"
-  - name: maven-plugin
-    version: "3.11"
-  - name: pmd
-    version: "4.0.0"
-  - name: tasks
-    version: "4.53"
+    version: "3.3.1"
   - name: timestamper
-    version: "1.13"
+    version: "1.17"
   - name: versionnumber
     version: "1.9"
-  - name: warnings-ng
-    version: "9.1.0"
 
 # Plugins that must be absent for jenkins-pv-pipeline-library
-jenkins_pv_pipeline_library_plugins_absent: []
+jenkins_pv_pipeline_library_plugins_absent:
+  - name: analysis-core
+  - name: analysis-collector
+  - name: checkstyle
+  - name: findbugs
+  - name: pmd
+  - name: tasks
 
 # Signatures that need to be approved for jenkins-pv-pipeline-library
 jenkins_pv_pipeline_library_approved_signatures_present: []
