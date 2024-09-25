@@ -1,3 +1,7 @@
+> :information_source: **Unmaintained**
+>
+> This project is currently not maintained.
+
 # pro_vision.jenkins_pv_pipeline_library
 
 This role is a utility roles to setup jenkins instances for the usage of
